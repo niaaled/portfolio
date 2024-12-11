@@ -97,6 +97,8 @@ header {
 
 .day {
     background-image: url('daypng.png');
+      background-size: cover;  /* Add this to ensure image fills the container */
+    background-position: center;  /* Add this to center the image */
     color: white;
     padding: 20px;
     border-radius: 50%;
@@ -107,6 +109,7 @@ header {
     align-items: center;
     aspect-ratio: 1 / 1;
 }
+
 
 .day:hover {
     transform: scale(1.1);
