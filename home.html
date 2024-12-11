@@ -12,12 +12,35 @@
     <link rel='stylesheet' href='calendarstyle.css'>
 </head>
 
-
-<div class="calendar-grid">
-    <div class="title">...</div>
-    <div class="day day-1">...</div>
-    <div class="day day-2">...</div>
-    ...
-    <div class="day day-24">...</div>
-</div>
+<body>
+    
+    <div class= subtext>  
+    <h1>Nia's Christmas Calendar</h1>
+       <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
+    </div>
+        <div class='calendar'>
+        <div id='days'>
+            <div class='day' onclick='showPopup(1)'>12</div>
+            <div class='day' onclick='showPopup(2)'>13</div>
+            <div class='day' onclick='showPopup(3)'>14</div>
+            <div class='day' onclick='showPopup(4)'>15</div>
+            <div class='day' onclick='showPopup(5)'>16</div>
+            <div class='day' onclick='showPopup(6)'>17</div>
+            <div class='day' onclick='showPopup(7)'>18</div>
+            <div class='day' onclick='showPopup(8)'>19</div>
+            <div class='day' onclick='showPopup(9)'>20</div>
+            <div class='day' onclick='showPopup(10)'>21</div>
+            <div class='day' onclick='showPopup(11)'>22</div>
+            <div class='day' onclick='showPopup(12)'>23</div>
+            <div class='day24' onclick='showPopup(12)'>24</div>
+            
+        </div>
+    </div>
+    <div id='popup' class='popup'>
+        <span class='close' onclick='closePopup()'>&times;</span>
+        <div id='popup-content'></div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
 
