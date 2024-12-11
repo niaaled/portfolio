@@ -96,7 +96,7 @@ header {
 }
 
 .day {
-    background-color: #c0392b;
+    background-image: url('daypng.png');
     color: white;
     padding: 20px;
     border-radius: 50%;
