@@ -5,56 +5,55 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Nia's Christmas Calendar</title>
     <link rel='stylesheet' href='calendarstyle.css'>
-    <link rel="icon" type="image/jpg" href="newsnowflake.png">
+    <link rel="icon" type="image/png" href="newsnowflake.png">
 </head>
 <body>
     <header>
         <div class="calendarlogo-container">
             <img src="headercalendar.png" alt="Nia's Christmas Calendar" class="logo">
         </div>
-
         
-  <div class="menu" id="menuToggle">
-    <img src="newsnowflake.png" alt="Logo">
-  </div>
-  <nav class="nav-menu" id="navMenu">
-    <ul>
-      <li><a href="#home">Calendar</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-
+        <div class="menu" id="menuToggle">
+            <img src="newsnowflake.png" alt="Menu">
+        </div>
+        <nav class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="subtext">  
-        <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
-    </div>
-
-    <div class='calendar'>
-        <div id='days'>
-            <div class='day' onclick='showPopup(12)'>12</div>
-            <div class='day' onclick='showPopup(13)'>13</div>
-            <div class='day' onclick='showPopup(14)'>14</div>
-            <div class='day' onclick='showPopup(15)'>15</div>
-            <div class='day' onclick='showPopup(16)'>16</div>
-            <div class='day' onclick='showPopup(17)'>17</div>
-            <div class='day' onclick='showPopup(18)'>18</div>
-            <div class='day' onclick='showPopup(19)'>19</div>
-            <div class='day' onclick='showPopup(20)'>20</div>
-            <div class='day' onclick='showPopup(21)'>21</div>
-            <div class='day' onclick='showPopup(22)'>22</div>
-            <div class='day' onclick='showPopup(23)'>23</div>
-            <div class='day' onclick='showPopup(24)'>24</div>
+    <main>
+        <div class="subtext">  
+            <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
         </div>
-    </div>
 
-    <div id='popup' class='popup'>
-        <span class='close' onclick='closePopup()'>&times;</span>
-        <div id='popup-content'></div>
-    </div>
+        <div class='calendar' id="calendar">
+            <div id='days'>
+                <div class='day' onclick='showPopup(12)'>12</div>
+                <div class='day' onclick='showPopup(13)'>13</div>
+                <div class='day' onclick='showPopup(14)'>14</div>
+                <div class='day' onclick='showPopup(15)'>15</div>
+                <div class='day' onclick='showPopup(16)'>16</div>
+                <div class='day' onclick='showPopup(17)'>17</div>
+                <div class='day' onclick='showPopup(18)'>18</div>
+                <div class='day' onclick='showPopup(19)'>19</div>
+                <div class='day' onclick='showPopup(20)'>20</div>
+                <div class='day' onclick='showPopup(21)'>21</div>
+                <div class='day' onclick='showPopup(22)'>22</div>
+                <div class='day' onclick='showPopup(23)'>23</div>
+                <div class='day' onclick='showPopup(24)'>24</div>
+            </div>
+        </div>
+
+        <div id='popup' class='popup'>
+            <span class='close' onclick='closePopup()'>&times;</span>
+            <div id='popup-content'></div>
+        </div>
+    </main>
 
     <script src='calendar.js'></script>
 </body>
