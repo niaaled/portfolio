@@ -41,21 +41,8 @@ body {
     transition: transform 0.3s;
 }
 
-.day24{
-    background-color: #c0392b;
-    color: white;
-    padding: 30px;
-    border-radius: 90px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
 
-.day24:hover
+.day:hover
 {
     transform: scale(1.1)
 }
