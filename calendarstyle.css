@@ -99,7 +99,10 @@ header {
     background-image: url('daypng.png');
       background-size: cover;  /* Add this to ensure image fills the container */
     background-position: center;  /* Add this to center the image */
-    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: darkred;
+    font-size:x-large;
+    font-weight: 900;
     padding: 20px;
     border-radius: 50%;
     cursor: pointer;
