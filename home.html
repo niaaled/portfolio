@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang='en'>
-   
-
-    
-
-<body>
-
-
-   <header>
-      <head>
-
-    <link rel="icon" type="image/jpg" href="newsnowflake.png">
-        
+<head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Nia's Christmas Calendar</title>
     <link rel='stylesheet' href='calendarstyle.css'>
+    <link rel="icon" type="image/jpg" href="newsnowflake.png">
 </head>
-  <div class="calendarlogo-container">
-    <img src="headercalendar.png" alt="Nia's Christmas Calendar" class="logo">
-  </div>
-</header>
+<body>
+    <header>
+        <div class="calendarlogo-container">
+            <img src="headercalendar.png" alt="Nia's Christmas Calendar" class="logo">
+        </div>
+    </header>
 
-    <div class= subtext>  
- 
-       <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
+    <div class="subtext">  
+        <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
     </div>
-        <div class='calendar'>
+
+    <div class='calendar'>
         <div id='days'>
             <div class='day' onclick='showPopup(12)'>12</div>
             <div class='day' onclick='showPopup(13)'>13</div>
@@ -41,14 +33,14 @@
             <div class='day' onclick='showPopup(22)'>22</div>
             <div class='day' onclick='showPopup(23)'>23</div>
             <div class='day' onclick='showPopup(24)'>24</div>
-            
         </div>
     </div>
+
     <div id='popup' class='popup'>
         <span class='close' onclick='closePopup()'>&times;</span>
         <div id='popup-content'></div>
     </div>
+
     <script src='calendar.js'></script>
 </body>
 </html>
-
