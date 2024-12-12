@@ -32,13 +32,9 @@ document.querySelector('.menu').addEventListener('click', function() {
 
 
 
+const menuButton = document.querySelector('.menu');
+const navMenu = document.querySelector('.nav-menu');
 
-
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    
-    event.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    document.getElementById('contactForm').reset();
+menuButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
-</script>
