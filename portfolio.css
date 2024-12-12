@@ -67,7 +67,7 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-n.menu {
+.menu {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -118,6 +118,7 @@ n.menu {
     text-decoration: none;
     font-size: 18px;
 }
+
 .hero {
     text-align: center;
     padding: 100px 0;
