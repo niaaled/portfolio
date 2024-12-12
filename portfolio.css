@@ -274,11 +274,31 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+     letter-spacing: 1px;
 }
 
 .service p {
     font-size: 1rem;
     line-height: 1.5;
+      opacity: 0.9;
+}
+
+
+.tagline {
+    background-color: ##141519;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.tagline h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: 1200px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -286,5 +306,8 @@ header {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+    
+    .tagline h1 {
+        font-size: 2.5rem;
+    }
 }
-
