@@ -29,6 +29,15 @@ document.querySelector('.menu').addEventListener('click', function() {
 });
 
 
-
-
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  document.querySelectorAll('h1, p').forEach(el => {
+    observer.observe(el);
+  });
+  
