@@ -27,11 +27,12 @@
     </header>
 
     <main>
-        <div class="subtext">  
-            <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
-        </div>
-
+       
+<div class='content'>
         <div class='calendar' id="calendar">
+            <div class="subtext">  
+                <p>Here is a little Christmas calendar I made for you, love ya ❤️</p>
+            </div>
             <div id='days'>
                 <div class='day' onclick='showPopup(12)'>12</div>
                 <div class='day' onclick='showPopup(13)'>13</div>
@@ -47,14 +48,22 @@
                 <div class='day' onclick='showPopup(23)'>23</div>
                 <div class='day' onclick='showPopup(24)'>24</div>
             </div>
+            </div>
+        </div>
+   
+</div>
+
         </div>
 
-        <div id='popup' class='popup'>
-            <span class='close' onclick='closePopup()'>&times;</span>
-            <div id='popup-content'></div>
+        <div class="popup" id="popup">
+            <div class="popup-content" id="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div class="popup-text"></div>
+            </div>
         </div>
+        
     </main>
 
-    <script src='calendar.js'></script>
+    <script src="./calendar.js"></script>
 </body>
 </html>
