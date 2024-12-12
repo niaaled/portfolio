@@ -70,17 +70,17 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+
 .menu {
     width: 24px;
     height: 24px;
     position: absolute;
     top: 10px;
-    left: 10px;  /* Change right: 10px to left: 10px */
+    left: 10px;  /* Change from right: 10px to left: 10px */
     transition: transform 0.3s ease;
     cursor: pointer;
     z-index: 1001;
 }
-
 
 .menu:hover {
     transform: rotate(20deg);  /* Fixed syntax error */
@@ -92,27 +92,28 @@ header {
     object-fit: contain;
 }
 
-nav-menu {
+
+.nav-menu {
     position: fixed;
     top: 0;
-    width: 100%;
-    left: -100%;
-    
+    left: -300px;  /* Change from right: -300px to left: -300px */
+    width: 300px;
     height: 100vh;
-    background-color: rgba(51, 51, 51, 0.9);
-    transition: left 0.3s ease-in-out;
+    background-color: rgba(174, 173, 165, 0.744);
+    transition: left 0.3s ease-in-out;  /* Change from right to left */
     z-index: 1000;
-
-
-nav-menu.active {
-    left: 0;  /* Change right: 0 to left: 0 */
 }
+
+.nav-menu.active {
+    left: 0;  /* Change from right: 0 to left: 0 */
+}
+
+
 
 
 .nav-menu ul {
     padding: 50px 0 0 0;
     list-style: none;
-    margin: 0;
 }
 
 .nav-menu ul li {
@@ -120,10 +121,15 @@ nav-menu.active {
 }
 
 .nav-menu ul li a {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-size: xx-large;
+    font-stretch: expanded;
+    font-weight: bold;
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
+
 
 .hero {
     text-align: center;
