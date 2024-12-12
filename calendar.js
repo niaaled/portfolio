@@ -1,89 +1,39 @@
 function showPopup(day) {
-    const popup = document.getElementById('popup');
-    const content = document.getElementById('popup-content');
-
- if (day === 12) {
-        content.innerHTML = 'Day 12: Yayy only 12 days til Christmas!';
-    } 
-     
-
-    if (day === 13) {
-        content.innerHTML = 'Day 13:';
-    } 
-     
-
-    if (day === 14) {
-        content.innerHTML = 'Day 14:';
-    } 
-     
-
-    if (day === 15) {
-        content.innerHTML = 'Day 15:';
-    } 
-     
-
-    if (day === 16) {
-        content.innerHTML = 'Day 16:';
-    } 
-     
-
-    if (day === 17) {
-        content.innerHTML = 'Day 17:';
-    } 
-     
-
-    if (day === 18) {
-        content.innerHTML = 'Day 18:';
-    } 
-     
-
-    if (day === 19) {
-        content.innerHTML = 'Day 19:';
-    } 
-     
-
-    if (day === 20) {
-        content.innerHTML = 'Day 20: ';
-    } 
-     
-
-    if (day === 21) {
-        content.innerHTML = 'Day 21:';
-    } 
-     
-
-    if (day === 22) {
-        content.innerHTML = 'Day 22:';
-    } 
-     
-
-    if (day === 23) {
-        content.innerHTML = 'Day 23:';
-    } 
-     
+    const popup = document.querySelector('.popup');
+    const popupText = document.querySelector('.popup-text');
     
-    if (day === 24) {
-        content.innerHTML = 'Day 24: Merry Christmas Eve! 🎄✨';
-    } 
-     
+    const messages = {
+        12: "Yayy only 12 days til Christmas! 🎄",
+        13: "Day 13: Time for hot chocolate! ☕",
+        14: "Day 14: Make a snowman! ⛄",
+        15: "Day 15: Write your wishlist! 📝",
+        16: "Day 16: Wrap some presents! 🎁",
+        17: "Day 17: Sing carols! 🎵",
+        18: "Day 18: Decorate cookies! 🍪",
+        19: "Day 19: Watch a Christmas movie! 🎬",
+        20: "Day 20: Send Christmas cards! ✉️",
+        21: "Day 21: Winter solstice! ❄️",
+        22: "Day 22: Make gingerbread! 🏠",
+        23: "Day 23: Put presents under the tree! 🎄",
+        24: "Merry Christmas Eve! 🎅✨"
+    };
 
-
-
-    popup.style.display = 'flex';
+    popupText.innerHTML = messages[day] || `Day ${day}`;
+    popup.style.display = 'block';
 }
 
 function closePopup() {
-    const popup = document.getElementById('popup');
+    const popup = document.querySelector('.popup');
     popup.style.display = 'none';
 }
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  menuToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-  });
+// Close popup when clicking outside
+window.onclick = function(event) {
+    const popup = document.querySelector('.popup');
+    if (event.target === popup) {
+        closePopup();
+    }
+}
+document.querySelector('.menu').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
 });
