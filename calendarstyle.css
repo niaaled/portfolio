@@ -114,33 +114,38 @@ color: 475346;
     border-radius: 20px;
     padding: 30px;
     width: 90%;
-   height: 900px;
+    height: 900px;
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;  /* Add this */
+    justify-content: center; /* Add this */
+    align-items: center;     /* Add this */
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 10px;
-    padding: 25px;
     box-sizing: border-box;
     margin-top: 20px;
 }
 
+
 #days {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr); /* Change to fixed 4 columns */
+    gap: 20px;
+    width: 80%;             /* Add this */
+    margin: 0 auto;         /* Add this */
     justify-content: center;
+    align-items: center;    /* Add this */
 }
 
 .day {
     background-image: url('heart.png');
-      background-size: cover;  /* Add this to ensure image fills the container */
-    background-position: center;  /* Add this to center the image */
+    background-size: cover;
+    background-position: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   color: darkred;
-    font-size:x-large;
+    color: darkred;
+    font-size: x-large;
     font-weight: 900;
     padding: 20px;
     border-radius: 50%;
@@ -150,6 +155,7 @@ color: 475346;
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
+    margin: 0 auto;         /* Add this */
 }
 
 
