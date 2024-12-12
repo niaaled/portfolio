@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #141519;
 }
 
 body, html {
@@ -248,5 +248,41 @@ header {
         padding: 10px;
     }
 
+
+
+
     
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: 141519; /* Rich blue background */
+    color: white;
+}
+
+.service {
+    padding: 1rem;
+    text-align: center;
+}
+
+.service h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
 
