@@ -56,10 +56,12 @@ html {
     z-index: 1;
 }
 
+
 h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
     animation: slideIn 1s ease-out;
+    animation-fill-mode: forwards;
     opacity: 0;
   transform: translateX(-100%);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -68,7 +70,8 @@ h1 {
 
 p {
     font-size: 1.2em;
-    animation: fadeIn 1.5s ease-in;
+    animation: slideIn 1s ease-out;
+    animation-fill-mode: forwards;
     opacity: 0;
   transform: translateX(-100%);
   transition: opacity 1s ease-out, transform 1s ease-out;
