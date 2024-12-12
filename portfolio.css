@@ -3,12 +3,14 @@ body {
     line-height: 1.6;
     color: #ffffff;
     background-color: #141519;
+    margin: 40px;
+    padding: 0;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
- 
+
+html {
+  
+        scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -19,13 +21,21 @@ body, html {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title {
     position: relative;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .title img {
     width: 100%;
@@ -49,11 +59,59 @@ body, html {
 h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
+    animation: slideIn 1s ease-out;
+    opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
 
 p {
     font-size: 1.2em;
+    animation: fadeIn 1.5s ease-in;
+    opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+h1.animate, p.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+
+
+.tagline:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+  }
+  
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
 
 .content {
     height: 1000px;
@@ -252,54 +310,106 @@ header {
 
 
 
-    
 .services-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    padding: 4rem 2rem;
-   background-color: #141519;
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding: 6rem 4rem;
+    background-color: #141519;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    z-index: 1;
 }
 
 .service {
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .service h2 {
     font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-     letter-spacing: 1px;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.service h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff;
 }
 
 .service p {
-    font-size: 1rem;
-    line-height: 1.5;
-      opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-top: 1rem;
 }
+
 
 
 .tagline {
-    background-color: ##141519;
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 6rem 2rem;
+    background-color: #141519;
+    color: white;
+    padding: 90px 20px;
+    margin: 20px;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .tagline h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
-    letter-spacing: 2px;
     line-height: 1.2;
 }
+
+@media (max-width: 768px) {
+    .tagline h1 {
+        font-size: 2rem;
+    }
+}
+
 
 @media (max-width: 768px) {
     .services-container {
