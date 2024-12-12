@@ -1,35 +1,56 @@
 body {
-    font-family: 'Arial', sans-serif; 
+    font-family: 'Arial', sans-serif;
     background-image: url('winter.gif');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 20px;
     box-sizing: border-box;
 }
 
 header {
+  
     position: relative;
-    width: 200%;
-    height: 200%;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.calendarlogo-container
+
+{width: 100%;
+    text-align: center;
+}
+
+.logo
+
+{width: 150%;        /* Adjust this value to make the logo larger */
+    max-width: 900px;  /* Set a maximum width to prevent excessive scaling */
+    height: auto;      /* Maintain aspect ratio */
 }
 
 .menu {
+    width: 24px;
+    height: 24px;
     position: absolute;
     top: 10px;
     right: 10px;
-    max-width: 30px;    /* Set a maximum width */
-    max-height: 30px;   /* Set a maximum height */
-    z-index: 1000;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu:hover {
+    transform: rotate(20deg);  /* Fixed syntax error */
 }
 
 .menu img {
-    width: 100%;
-    height: 100%;
+    width: 80px;        /* Fixed from 1000% to 100% */
+    height: 80px;       /* Fixed from 90px to 100% */
     object-fit: contain;
 }
 
@@ -39,8 +60,9 @@ header {
     right: -300px;
     width: 300px;
     height: 100vh;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);  /* Added some transparency */
     transition: right 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .nav-menu.active {
@@ -50,6 +72,7 @@ header {
 .nav-menu ul {
     padding: 50px 0 0 0;
     list-style: none;
+    margin: 0;
 }
 
 .nav-menu ul li {
@@ -62,30 +85,39 @@ header {
     font-size: 18px;
 }
 
-.calendarlogo-container {
-    width: 20%;
-    text-align: center;
-}
-
-.logo {
-    max-width: 100%;
-    height: auto;
-}
 
 .subtext {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: 800;
+color: 475346;
+    text-decoration: solid;
+    text-shadow: #fefefe;
+
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .calendar {
-    width: 100%;
-    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+   height: 900px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 10px;
     padding: 25px;
     box-sizing: border-box;
+    margin-top: 20px;
 }
 
 #days {
@@ -116,4 +148,71 @@ header {
 
 .day:hover {
     transform: scale(1.1);
+}@keyframes dayAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.day {
+    animation: dayAppear 0.3s ease-out forwards;
+}
+
+/* Add staggered animation delay for each day */
+.day:nth-child(1) { animation-delay: 0.1s; }
+.day:nth-child(2) { animation-delay: 0.2s; }
+.day:nth-child(3) { animation-delay: 0.3s; }
+/* Continue for all days */
+
+/* Add this to your CSS */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: popupAppear 0.3s ease-out;
+}
+
+@keyframes popupAppear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.popup-text {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
 }
