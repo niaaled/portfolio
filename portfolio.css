@@ -99,7 +99,7 @@ header {
     left: -300px;  /* Change from right: -300px to left: -300px */
     width: 300px;
     height: 100vh;
-    background-color: rgba(251, 251, 251, 0.913);
+    background-color: rgba(251, 251, 251, 0.506);
     transition: left 0.3s ease-in-out;  /* Change from right to left */
     z-index: 1000;
 }
