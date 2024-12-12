@@ -32,9 +32,3 @@ document.querySelector('.menu').addEventListener('click', function() {
 
 
 
-const menuButton = document.querySelector('.menu');
-const navMenu = document.querySelector('.nav-menu');
-
-menuButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
