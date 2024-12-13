@@ -5,7 +5,22 @@ body {
     background-color: #141519;
     margin: 40px;
     padding: 0;
+    cursor: none;
 }
+
+
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+  
 
 
 html {
