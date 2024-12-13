@@ -264,29 +264,38 @@ header {
     gap: 15px;
 }
 
-#contactForm input,
-#contactForm textarea {
+#contactForm {
+    display: flex;
+    flex-direction: row;  /* Change from column to row */
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+    #contactForm input {
+    width: 200px;  /* Set specific widths for inputs */
     padding: 12px;
-    font-size: 1em;
     background-color: white;
     border: none;
-    border-radius: 0;
 }
 
 #contactForm textarea {
-    resize: vertical;
-    min-height: 100px;
+    width: 300px;  /* Set wider width for message */
+    height: 40px;  /* Reduce height to match inputs */
+    padding: 12px;
+    background-color: white;
+    border: none;
 }
-
+    
 #contactForm button {
     padding: 12px 20px;
-    font-size: 1em;
     background-color: white;
     color: black;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
+
 
 #contactForm button:hover {
     transform: translateY(-2px);
