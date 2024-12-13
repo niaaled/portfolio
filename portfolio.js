@@ -40,4 +40,12 @@ const observer = new IntersectionObserver((entries) => {
   document.querySelectorAll('h1, p').forEach(el => {
     observer.observe(el);
   });
-  
+
+
+  const cursor = document.getElementById('cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.pageX}px`;
+  cursor.style.top = `${e.pageY}px`;
+});
+
