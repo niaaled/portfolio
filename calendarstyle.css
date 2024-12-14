@@ -185,7 +185,7 @@ header {
     }
 }
 
-/* Popup Styles */
+
 .popup {
     display: none;
     position: fixed;
@@ -235,7 +235,7 @@ header {
     color: #c0392b;
 }
 
-/* Media Queries */
+
 @media screen and (max-width: 768px) {
     .calendar {
         padding: 20px;
@@ -244,10 +244,13 @@ header {
 
 
 
-    .popup-content {
+   
+.popup-content {
+        height: 15%;
         width: 85%;
         max-width: none;
         margin: 10px;
-        padding: 15px;
+        padding: auto;
+        top: 350px;
     }
 }
