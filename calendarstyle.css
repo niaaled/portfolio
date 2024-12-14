@@ -1,4 +1,4 @@
-/* Base styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('winter.gif');
@@ -12,7 +12,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Header and Logo */
 header {
     width: 100%;
     padding: 20px 0;
@@ -97,7 +96,7 @@ header {
 }
 
 
-/* Calendar Container */
+
 .calendar {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -121,8 +120,6 @@ header {
     padding: 0 20px;
 }
 
-/* Calendar Days Grid */
-/* Calendar Days Grid */
 #days {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
