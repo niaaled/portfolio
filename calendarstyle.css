@@ -235,12 +235,13 @@ header {
 
 @media screen and (max-width: 768px) {
     .calendar {
-        width: 90%;
-        margin: 10px auto;
-        padding: 15px;
-        border-radius: 15px;
-        height: 60px;
-
+        padding: 20px;
+        width: 95%;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
     .popup-content {
         height: 15%;
