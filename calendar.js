@@ -1,6 +1,8 @@
 function showPopup(day) {
     const popup = document.querySelector('.popup');
     const popupContent = document.querySelector('.popup-content');
+
+    if (!popup || !popupContent) return;
     
     const messages = {
         12: `<h2>✨ Day 12 ✨</h2>
@@ -44,15 +46,19 @@ function showPopup(day) {
              <div class="christmas-magic"></div>`
     };
 
-    popupContent.innerHTML = messages[day];
-    popup.classList.add('show');
-    popupContent.classList.add('animate');
+   if (messages[day]) {
+        popupContent.innerHTML = messages[day];
+        popup.classList.add('show');
+        popupContent.classList.add('animate');
+    }
+
 }
 
 function closePopup() {
     const popup = document.querySelector('.popup');
     const popupContent = document.querySelector('.popup-content');
-    
+
+        if (!popup || !popupContent) return;
     popupContent.classList.remove('animate');
     popup.classList.remove('show');
 }
@@ -75,3 +81,11 @@ document.querySelector('.menu').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
 
+const menuButton = document.querySelector('.menu');
+const navMenu = document.querySelector('.nav-menu');
+
+if (menuButton && navMenu) {
+    menuButton.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
+}
