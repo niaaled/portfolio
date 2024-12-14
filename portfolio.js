@@ -57,3 +57,16 @@ document.addEventListener('mouseup', () => {
     cursor.style.width = '20px';
     cursor.style.height = '20px';
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('#home h1, #home p').forEach(el => {
+    observer.observe(el);
+});
+
