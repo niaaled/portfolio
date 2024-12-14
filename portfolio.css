@@ -44,7 +44,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Navigation */
+
 .menu {
     position: fixed;
     top: 20px;
@@ -98,7 +98,7 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Sections */
+
 #home {
     padding: 60px 20px;
     text-align: center;
@@ -144,7 +144,7 @@ text-transform: uppercase;
     text-transform: uppercase;
 }
 
-/* Footer */
+
 footer {
     background-color: #141519;
     padding: 20px;
@@ -348,5 +348,16 @@ footer {
     
     #contact h2 {
         font-size: 2em;
+    }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+    body {
+        cursor: auto; /* Restore default cursor */
+    }
+
+    .cursor {
+        display: none; /* Hide the custom cursor */
     }
 }
