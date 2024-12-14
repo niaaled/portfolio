@@ -235,14 +235,12 @@ header {
 
 @media screen and (max-width: 768px) {
     .calendar {
-        padding: 20px;
-        width: 95%;
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+        border-radius: 15px;
     }
-
-
-
-   
-.popup-content {
+    .popup-content {
         height: 15%;
         width: 85%;
         max-width: none;
@@ -272,3 +270,49 @@ header {
 }
 
 }
+
+
+
+@media screen and (max-width: 480px) {
+    .calendar {
+        width: 95%;
+        margin: 5px auto;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .popup-content {
+        height: 15%;
+        width: 85%;
+        max-width: none;
+        margin: 10px;
+        padding: auto;
+        top: 300px;
+    }
+    .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+    .close:hover {
+    color: #c0392b;
+}
+    .popup-content.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+    .popup.show {
+    display: flex;
+    opacity: 1;
+}
+
+}
+
+
+
+
+
+   
