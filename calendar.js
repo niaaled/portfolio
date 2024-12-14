@@ -67,7 +67,7 @@ function handleOutsideClick(event) {
 }
 
 
-indow.addEventListener('click', handleOutsideClick, true);
+window.addEventListener('click', handleOutsideClick, true);
 window.addEventListener('touchend', handleOutsideClick, true);
 
 
