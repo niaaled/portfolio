@@ -30,16 +30,13 @@ header {
     height: auto;
 }
 
-/* Navigation Menu */
 .menu {
     position: fixed;
     top: 20px;
     left: 20px;
     width: 40px;
     height: 40px;
-    cursor: pointer;
     z-index: 1001;
-    transition: transform 0.3s ease;
 }
 
 .menu:hover {
@@ -53,9 +50,9 @@ header {
 }
 
 .nav-menu {
-    position: relative ;
+    position: fixed;
     top: 0;
-    left: -300px;
+    left: -250px;
     width: 250px;
     height: 100vh;
     background-color: rgba(211, 211, 211, 0.9);
@@ -68,17 +65,13 @@ header {
 }
 
 .nav-menu ul {
-   position: absolute;
-    top: 50%
-    padding: 0;
-    transform: translateY(-50%); /* Center it vertically */
+    padding: 50px 0 0 0;
     list-style: none;
     margin: 0;
 }
 
 .nav-menu ul li {
     padding: 15px 30px;
-    margin-bottom: 20px;
 }
 
 .nav-menu ul li a {
@@ -89,6 +82,7 @@ header {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 
 @media screen and (max-height: 600px) {
   nav ul {
