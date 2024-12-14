@@ -67,6 +67,8 @@ function handleOutsideClick(event) {
 
 window.addEventListener('click', handleOutsideClick);
 window.addEventListener('touchend', handleOutsideClick);
- {
+
+document.querySelector('.menu').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
+
