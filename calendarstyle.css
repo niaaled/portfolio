@@ -251,7 +251,7 @@ header {
         width: 85%;
         max-width: none;
         margin: 10px;
-        padding: auto;
+      
         top: 300px;
     }
 
@@ -300,7 +300,7 @@ header {
         width: 85%;
         max-width: none;
         margin: 10px;
-        padding: auto;
+       
         top: 300px;
     }
     .close {
