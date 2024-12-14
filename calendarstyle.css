@@ -173,7 +173,7 @@ header {
 }
 
 
-/* Animations */
+
 @keyframes dayAppear {
     from {
         opacity: 0;
@@ -251,6 +251,15 @@ header {
         max-width: none;
         margin: 10px;
         padding: auto;
-        top: 350px;
+        top: 300px;
     }
+    .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
 }
