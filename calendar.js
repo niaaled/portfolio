@@ -60,6 +60,8 @@ function closePopup() {
 function handleOutsideClick(event) {
     const popup = document.querySelector('.popup');
     if (event.target === popup) {
+        event.preventDefault();
+        event.stopPropagation();
         closePopup();
     }
 }
