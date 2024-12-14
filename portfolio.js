@@ -23,24 +23,26 @@ document.querySelectorAll('.portfolio-item img').forEach(img => {
 modal.addEventListener('click', function() {
     this.style.display = 'none';
 });
+
 // Menu toggle
 document.querySelector('.menu').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
 
-
-const observer = new IntersectionObserver((entries) => {
+// Intersection Observer for animations
+const animationObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-      }
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
     });
-  }, { threshold: 0.1 });
-  
-  document.querySelectorAll('h1, p').forEach(el => {
-    observer.observe(el);
-  });
+}, { threshold: 0.1 });
 
+document.querySelectorAll('#home, #about').forEach(el => {
+    animationObserver.observe(el);
+});
+
+// Custom cursor
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', (e) => {
@@ -57,16 +59,3 @@ document.addEventListener('mouseup', () => {
     cursor.style.width = '20px';
     cursor.style.height = '20px';
 });
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        }
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('#home h1, #home p').forEach(el => {
-    observer.observe(el);
-});
-
