@@ -99,18 +99,19 @@ body {
 }
 
 /* Sections */
-#home h1 {
+#home {
     padding: 60px 20px;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+     font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-#home h1.animate {
-    opacity: 1;
-    transform: translateY(0);
+#about{
+text-align: center;
+text-transform: uppercase;
 }
+
 
 .services-container {
     display: grid;
