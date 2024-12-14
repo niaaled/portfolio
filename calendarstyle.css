@@ -122,13 +122,15 @@ header {
 }
 
 /* Calendar Days Grid */
+/* Calendar Days Grid */
 #days {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: clamp(10px, 2vw, 15px);    width: 500%;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: clamp(10px, 2vw, 15px);
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    width 100%
+    padding: 15px;
 }
 
 .day {
@@ -136,15 +138,34 @@ header {
     background-size: cover;
     background-position: center;
     color: darkred;
-    font-size: 24px;
+    font-size: clamp(16px, 4vw, 24px);
     font-weight: 900;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;  /* Changed from transform to all */
+    transition: transform 0.3s ease;
 }
+
+@media screen and (max-width: 480px) {
+    #days {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .day {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #days {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 .day:hover {
     transform: none;
@@ -221,14 +242,7 @@ header {
         width: 95%;
     }
 
-    #days {
-        gap: 10px;
-           grid-template-columns: repeat(2, 1fr);
-    }
 
-    .day {
-        font-size: 20px;
-    }
 
     .popup-content {
         width: 85%;
