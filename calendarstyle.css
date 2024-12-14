@@ -65,13 +65,14 @@ header {
 }
 
 .nav-menu ul {
-    top: 60%;
+   
     padding: 50px 0 0 0;
     list-style: none;
     margin: 0;
 }
 
 .nav-menu ul li {
+     top: 60%;
     padding: 15px 30px;
 }
 
