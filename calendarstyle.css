@@ -234,15 +234,18 @@ header {
 
 
 @media screen and (max-width: 768px) {
-    .calendar {
-        padding: 20px;
-        width: 95%;
-        position: fixed;
-        top: 20%;
+   .calendar {
+        position: absolute;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 85%;
         margin: 0;
+        padding: 15px;
+        max-height: 80vh;
+        overflow-y: auto;
     }
+
     .popup-content {
         height: 15%;
         width: 85%;
@@ -283,11 +286,11 @@ header {
 
 @media screen and (max-width: 480px) {
     .calendar {
-        width: 95%;
-        margin: 5px auto;
-        padding: 10px;
-        border-radius: 10px;
+        width: 90%;
+        padding: 12px;
+        top: 45%;
     }
+
 
        .subtext{
         padding: 0 15px;
