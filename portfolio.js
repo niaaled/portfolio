@@ -49,3 +49,21 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = `${e.pageY}px`;
 });
 
+
+
+
+
+
+
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+    if (cursor) {
+        requestAnimationFrame(() => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    }
+});
+
