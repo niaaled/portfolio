@@ -154,9 +154,11 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Cursor */
 .cursor {
     display: none;
+    pointer-events: none;
+    will-change: transform;
+    mix-blend-mode: difference;
 }
 
 @media screen and (min-width: 769px) {
@@ -167,11 +169,13 @@ footer {
         height: 20px;
         background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
         border-radius: 50%;
-        pointer-events: none;
         transform: translate(-50%, -50%);
         z-index: 9999;
+        transition: transform 0.1s ease;
     }
 }
+
+
 
 @media screen and (max-width: 768px) {
     .services-container {
