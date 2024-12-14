@@ -101,8 +101,8 @@ header {
 .calendar {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    padding: 30px;
-    width: 90%;
+    padding: clamp(15px, 3vw, 30px);    
+    width: min(90%, 800px);
     max-width: 800px;
     margin: 20px auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -124,11 +124,11 @@ header {
 /* Calendar Days Grid */
 #days {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    width: 500%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(10px, 2vw, 15px);    width: 500%;
     max-width: 600px;
     margin: 0 auto;
+    width 100%
 }
 
 .day {
@@ -147,7 +147,7 @@ header {
 }
 
 .day:hover {
-    transform: scale(1.1);
+    transform: none;
     z-index: 1;
 }
 
@@ -223,6 +223,7 @@ header {
 
     #days {
         gap: 10px;
+           grid-template-columns: repeat(2, 1fr);
     }
 
     .day {
@@ -230,8 +231,9 @@ header {
     }
 
     .popup-content {
-        width: 90%;
-        margin: 20px auto;
-        padding: 20px;
+        width: 85%;
+        max-width: none;
+        margin: 10px;
+        padding: 15px;
     }
 }
