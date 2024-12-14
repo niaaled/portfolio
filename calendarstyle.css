@@ -262,4 +262,16 @@ header {
     color: #666;
     transition: color 0.3s ease;
 }
+    .close:hover {
+    color: #c0392b;
+}
+    .popup-content.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+    .popup.show {
+    display: flex;
+    opacity: 1;
+}
+
 }
