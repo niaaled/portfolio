@@ -57,15 +57,16 @@ function closePopup() {
     popup.classList.remove('show');
 }
 
-// Close popup when clicking outside
-window.onclick = function(event) {
+function handleOutsideClick(event) {
     const popup = document.querySelector('.popup');
     if (event.target === popup) {
         closePopup();
     }
 }
 
-// Menu toggle
-document.querySelector('.menu').addEventListener('click', function() {
+
+window.addEventListener('click', handleOutsideClick);
+window.addEventListener('touchend', handleOutsideClick);
+ {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
