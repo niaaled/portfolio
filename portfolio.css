@@ -54,6 +54,10 @@ body {
     z-index: 1001;
 }
 
+.menu:hover {
+    transform: rotate(20deg);
+}
+
 .menu img {
     width: 150%;
     height: 150%;
