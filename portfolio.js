@@ -1,4 +1,3 @@
-// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,7 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Image modal
 const modal = document.createElement('div');
 modal.id = 'modal';
 document.body.appendChild(modal);
@@ -24,7 +22,6 @@ modal.addEventListener('click', function() {
     this.style.display = 'none';
 });
 
-// Menu toggle
 document.querySelector('.menu').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
@@ -42,7 +39,6 @@ document.querySelectorAll('#home, #about').forEach(el => {
     animationObserver.observe(el);
 });
 
-// Custom cursor
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', (e) => {
