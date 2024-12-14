@@ -47,14 +47,14 @@ header {
 }
 
 .menu img {
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 150%;
     object-fit: contain;
 }
 
 .nav-menu {
     position: fixed;
-    top: 0;
+    top: 10;
     left: -300px;
     width: 250px;
     height: 100vh;
