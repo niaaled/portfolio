@@ -84,8 +84,3 @@ document.querySelector('.menu').addEventListener('click', function() {
 const menuButton = document.querySelector('.menu');
 const navMenu = document.querySelector('.nav-menu');
 
-if (menuButton && navMenu) {
-    menuButton.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-    });
-}
