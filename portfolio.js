@@ -41,29 +41,19 @@ const observer = new IntersectionObserver((entries) => {
     observer.observe(el);
   });
 
-
-  const cursor = document.getElementById('cursor');
-
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.pageX}px`;
-  cursor.style.top = `${e.pageY}px`;
-});
-
-
-
-
-
-
-
-
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', (e) => {
-    if (cursor) {
-        requestAnimationFrame(() => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    }
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
 });
 
+document.addEventListener('mousedown', () => {
+    cursor.style.width = '15px';
+    cursor.style.height = '15px';
+});
+
+document.addEventListener('mouseup', () => {
+    cursor.style.width = '20px';
+    cursor.style.height = '20px';
+});
